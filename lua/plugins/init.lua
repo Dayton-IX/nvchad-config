@@ -1,8 +1,7 @@
-
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- format on save
     opts = require "configs.conform",
   },
 
@@ -29,11 +28,10 @@ return {
   {
     "kyazdani42/nvim-web-devicons",
     config = function()
-      require'nvim-web-devicons'.setup {
+      require("nvim-web-devicons").setup {
         -- Your options here (optional)
-        default = true;
+        default = true,
       }
     end,
   },
 }
-

@@ -14,13 +14,15 @@ M.base46 = {
   -- },
 }
 
+M.term = {
+  sizes = {
+    sp = -0.3,
+    vsp = 0.35,
+  },
+}
+
 M.ui = {
   transparency = true,
-  term = {
-    sizes = {
-      vertical = 90,
-    },
-  },
 }
 
 return M
