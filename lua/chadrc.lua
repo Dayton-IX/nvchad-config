@@ -6,12 +6,14 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "catppuccin",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+  --
+  transparency = true
 }
 
 -- M.nvdash = { load_on_startup = true }
@@ -20,5 +22,16 @@ M.base46 = {
 --          lazyload = false
 --      }
 --}
+
+M.term = {
+  sizes = {
+    sp = -0.3,
+    vsp = 0.35,
+  },
+}
+
+M.ui = {
+  transparency = true,
+}
 
 return M

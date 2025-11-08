@@ -4,6 +4,12 @@ vim.g.mapleader = " "
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
+local new_term_width = 90
+vim.g.nvterm_size = {
+  vertical = new_term_width,
+  horizontal = 10,
+}
+
 if not vim.uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
@@ -31,6 +37,9 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "autocmds"
+
+vim.opt.relativenumber = true
+vim.opt.showtabline = 2
 
 vim.schedule(function()
   require "mappings"
