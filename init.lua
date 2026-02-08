@@ -41,6 +41,12 @@ require "autocmds"
 vim.opt.relativenumber = true
 vim.opt.showtabline = 0
 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = "*",
+})
+
 vim.schedule(function()
   require "mappings"
 end)
