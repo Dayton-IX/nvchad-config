@@ -39,7 +39,7 @@ require "options"
 require "autocmds"
 
 vim.opt.relativenumber = true
-vim.opt.showtabline = 2
+vim.opt.showtabline = 0
 
 vim.schedule(function()
   require "mappings"
