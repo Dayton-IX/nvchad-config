@@ -34,9 +34,16 @@ return {
       },
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css"
+       "html", "css",
+       "markdown", "markdown_inline", "yaml"
   		},
   	},
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
+      -- Patch broken custom directives for Neovim 0.11+ (array-form match values).
+      -- See lua/configs/treesitter_compat.lua
+      require("configs.treesitter_compat").apply()
+    end,
   },
 
   ---@type LazySpec
